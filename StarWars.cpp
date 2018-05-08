@@ -131,8 +131,6 @@ void StarWars::battle() {
         if (m_myShips[m_myShips.getFront()]->attack(m_enemyShips.queueFront())) {
             cout << "The Imperial " << *m_enemyShips[m_enemyShips.getFront()] << " was destroyed." << endl;
             m_enemyShips.dequeue();
-            cout << "Imperial Size: " << m_enemyShips.size() << endl;
-            cout << "Imperial Front: " << m_enemyShips.getFront() << endl;
         } else {
             cout << "The Imperial " << *m_enemyShips[m_enemyShips.getFront()] << " was damaged." << endl;
         }
@@ -144,8 +142,6 @@ void StarWars::battle() {
         if (m_enemyShips[m_enemyShips.getFront()]->attack(m_myShips.queueFront())) {
             cout << "The Rebel " << *m_myShips[m_myShips.getFront()] << " was destroyed." << endl;
             m_myShips.dequeue();
-            cout << "Rebel Size: " << m_myShips.size() << endl;
-            cout << "Rebel Front: " << m_myShips.getFront() << endl;
         } else {
             cout << "The Rebel " << *m_myShips[m_myShips.getFront()] << " was damaged." << endl;
         }
@@ -160,7 +156,7 @@ void StarWars::battle() {
         cout << "Imperial Won!!" << endl;
     }
     if (m_enemyShips.isEmpty()) {
-        cout << "Rebel Wonered!!" << endl;
+        cout << "Rebel Wonnered!!" << endl;
     }
 }
 

@@ -118,7 +118,6 @@ void Tqueue<T>::enqueue(T data) {
     m_data = newData;
     m_back -= m_front;
     m_front = 0;
-    // delete [] newData;
   }
 }
 
@@ -129,8 +128,6 @@ void Tqueue<T>::dequeue() {
 
   m_front++;
    if (size() < ((m_capacity / 2) + 1)) {
-     cout << "kojq3o4irusodugysdkfuhweuhsero" << endl;
-     cout << "alsdhfalsdjghaksdjghasklgjhasflgj" << endl;
     // Re-calibrate m_capacity so that it aligns with
     // the new data.
     m_capacity/=2;
@@ -143,7 +140,6 @@ void Tqueue<T>::dequeue() {
     m_data = newData;
     m_back -= m_front;
     m_front = 0;
-    //delete [] newData;
    }
 }
 
@@ -188,7 +184,7 @@ Tqueue<T>& Tqueue<T>::operator=( const Tqueue<T> &y) {
     for (int i = y.m_front; i < y.m_back;i++) {
       newData[i-y.m_front] = y.m_data[i];
     }
-    // delete [] m_data;
+    delete [] m_data;
     m_data = newData;
     m_back = y.m_back - y.m_front;
     m_front = 0;
