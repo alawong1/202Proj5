@@ -1,4 +1,4 @@
-#include "Starwars.h"
+#include "StarWars.h"
 
 const int REBEL_TEAM     = 0;
 const int IMPERIAL_TEAM  = 1;

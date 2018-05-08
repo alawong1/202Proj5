@@ -1,11 +1,11 @@
 CXX = g++
-CXXFLAGS =
+CXXFLAGS = -Wall
 
 proj5: driver.cpp StarWars.o Ship.o Imperial.o Rebel.o 
 	$(CXX) $(CXXFLAGS) driver.cpp StarWars.o Ship.o Imperial.o Rebel.o -o proj5
 
 StarWars.o: StarWars.cpp StarWars.h
-	$(CXX) $(CXXFLAGS) -c Starwars.cpp
+	$(CXX) $(CXXFLAGS) -c StarWars.cpp
 
 Ship.o: Ship.cpp Ship.h
 	$(CXX) $(CXXFLAGS) -c Ship.cpp
